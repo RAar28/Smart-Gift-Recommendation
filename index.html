@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Giftie >_0🎀</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <h1>Giftie >_0🎀</h1>
+        <p>Find It. Love It. Gift It.</p>
+    </header>
+
+    <main>
+        <div class="box-wrapper">
+            <div class="mascot-hang">
+                <img src="images/mascot.png" alt="Hanging Mascot" class="mascot">
+            </div>
+            <section id="gift-form">
+                <form id="gift-suggestion-form">
+
+                    <div class="form-row">
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" name="age" min="0" max="120" required />
+                    </div>
+
+                    <div class="form-row">
+                        <label for="gender">Gender:</label>
+                        <select id="gender" name="gender" required>
+                            <option value="">--Select--</option>
+                            <option value="female">Female</option>
+                            <option value="male">Male</option>
+                         <!--   <option value="nonbinary">Non-binary</option>
+                            <option value="prefer-not">Prefer not to say</option>-->
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="occasion">Occasion:</label>
+                        <select id="occasion" name="occasion" onchange="showCustomOccasion(this)" required>
+                            <option value="">--Select--</option>
+                            <option value="birthday">Birthday</option>
+                            <option value="anniversary">Anniversary</option>
+                            <option value="graduation">Graduation</option>
+                            <option value="valentines day">Valentine's day</option>
+                            <option value="holiday">Holiday</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div id="custom-occasion-field" style="display: none;" class="form-row">
+                        <label for="custom-occasion">Please specify:</label>
+                        <input type="text" id="custom-occasion" name="custom-occasion"
+                            placeholder="e.g Baby showers,First job...">
+                    </div>
+
+                    <div class="form-row">
+                        <label for="relation">Your Relation with The Person:</label>
+                        <select id="relation" name="relation" onchange="showCustomRelation(this)" required>
+                            <option value="">--Select--</option>
+                            <option value="friend">Friend</option>
+                            <option value="boyfriend">Boyfriend</option>
+                            <option value="girlfriend">Girlfriend</option>
+                            <option value="wife">Wife</option>
+                            <option value="husband">Husband</option>
+                            <option value="son">Son</option>
+                            <option value="daughter">Daughter</option>
+                            <option value="mother">Mother</option>
+                            <option value="father">Father</option>
+                            <option value="sister">Sister</option>
+                            <option value="brother">Brother</option>
+                            <option value="co-worker">Co-worker</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div id="custom-relation-field" style="display: none;" class="form-row">
+                        <label for="custom-relation">Please specify:</label>
+                        <input type="text" id="custom-relation" name="custom-relation"
+                            placeholder="e.g cousin,neigbour...">
+                    </div>
+
+                    <div class="form-row">
+                        <label for="interests">Their Interests:</label>
+                        <input type="text" id="interests" name="interests" class="text-only"
+                            placeholder="Books, Music, Art, Sports..." />
+                    </div>
+
+                    <div class="form-row">
+                        <label for="budget">Your Budget(₹):</label>
+                        <input type="number" id="budget" name="budget" min="0" />
+                    </div>
+
+                    <button type="submit">Find Gift Suggestions</button>
+                </form>
+            </section>
+
+            <div class="pixel-text-box" id="mascot-text-box">Hi there! I'm your gift buddy</div>
+        </div>
+
+        <section id="suggestions">
+        </section>
+    </main>
+
+    <div id="gift-popup" class="hidden">
+         <div class="wokemascot">
+            <img src="images/wokemascot.png" alt="Mascot Open Eyes" class="mascot-envelope" />
+        </div>
+         <div class="pixel-text-box2" id="wokemascot-text-box">“Purr-fect gifts found! Ready to unwrap? 🎁😽”</div>
+        <div class="popup-envelope">
+            <button id="close" class="closebtn">x</button>
+                  <div class="floatingdecor"></div>
+            <div class="envelope-top"></div>
+            <div class="envelope-bottom"> 
+                <div class="suggestion-content">     
+                </div>
+            </div>
+        </div>
+        </div>
+         <footer class="site-footer">
+        <p>© 2025 Riddhima Agarwal. All rights reserved.</p>
+    </footer>
+    <canvas id="sparkle-canvas"></canvas>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
