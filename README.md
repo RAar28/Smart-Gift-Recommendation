@@ -14,4 +14,7 @@ It helps users find personalized gift ideas based on:
 - CSS
 - JavaScript
 
-<!-- Live demo link will be added after username update -->
+### 🌐 Live Site
+[Click here to visit the live site](https://rid-28.github.io/Smart-Gift-Recommendation/)
+
+---
